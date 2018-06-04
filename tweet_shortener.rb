@@ -12,3 +12,17 @@ dictionary = {
   "and" => "&"
 }
 end
+
+def word_substituter(tweet)
+  word_array = tweet.split(" ")
+  word_array.each do |word|
+    if dictionary.key.include? (word.downcase)
+      word = dictionary[word.downcase]
+    else
+      word 
+    end 
+    word.join(" ")
+  end 
+end 
+
+
